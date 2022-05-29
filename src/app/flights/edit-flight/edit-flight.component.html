@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-9">
+    <h3>Edit flight <strong>{{ flight?.code }}</strong> details</h3>
+  </div>
+  <div class="col-3 text-right delete-div">
+    remove flight <mat-icon (click)="removeFlight()" class="float-right delete-icon">delete</mat-icon>
+  </div>
+</div>
+<app-flight-form #flightForm [editMode]="true"></app-flight-form>
+<div class="row">
+  <div class="col text-right">
+    <button mat-raised-button class="mr-2 mb-4">RESET</button>
+    <button mat-raised-button color="primary" class="mb-4" (click)="editFlight()">SAVE</button>
+  </div>
+</div>
